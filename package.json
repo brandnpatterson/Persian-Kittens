@@ -1,0 +1,64 @@
+{
+  "name": "Cats",
+  "author": "Brandon Patterson",
+  "description": "Cat Website for Lauren White",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "url": "https://github.com/brandnpatterson/Cats/issues",
+  "homepage": "https://github.com/brandnpatterson/Cats#readme",
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "wiredep": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.5.2",
+    "browser-sync": "^2.2.1",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^6.1.1",
+    "gulp-cache": "^0.4.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-useref": "^3.0.0",
+    "gulp-watch": "^4.3.8",
+    "main-bower-files": "^2.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandnpatterson/Cats.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    }
+  },
+  "rules": {
+    "quotes": [
+      2,
+      "single"
+    ]
+  }
+}

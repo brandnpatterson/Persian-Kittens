@@ -1,0 +1,64 @@
+//    nav     //
+nav {
+  cursor: pointer;
+}
+
+#navbar.container {
+  margin-left: 3.25%;
+  padding-left: 0;
+}
+
+.navbar {
+  background-color: #F8F8FF;
+}
+
+.navbar h3 {
+  color: #2F2F2F;
+  float: left;
+  font-family: 'cinzelregular', Arial;
+  font-size: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+h3.navbar-top_home {
+  font-size: 45px;
+}
+
+.navbar-options {
+  border-top: #ddd 1px solid;
+  border-bottom: #ddd 1px solid;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-top {
+  border-radius: 0;
+  color: #777;
+  margin-bottom: 0;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.navbar-top a:hover {
+  text-decoration: none;
+}
+
+.logo {
+  margin-right: 0;
+  width: 80px;
+}
+
+//    dropdown    //
+.dropdown li:first-child {
+  padding-top: 15px;
+}
+
+.dropdown li:last-child {
+  padding-bottom: 15px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}

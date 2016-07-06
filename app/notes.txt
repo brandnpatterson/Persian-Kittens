@@ -1,0 +1,18 @@
+//    General Notes    //
+
+* Home Page - white looks plain
+
+* Home Page - Add Logo
+
+
+//    Done    //
+
+* Bootstrap Layout
+
+* Index
+
+* Gallery Pages
+
+* About, Contact Pages
+
+* Modal
