@@ -1,7 +1,8 @@
+/// General ///
+* Made commit, did not push 7/7/16 12am
+
 /// To Do ///
 
-* make background of navigation dropdown transparent
-* change background of selected items to transparent or light
 * find a bigger picture for the background
 * make the background responsive
 * add gallery
@@ -11,3 +12,6 @@
 
 
 /// Complete ///
+
+* make background of navigation dropdown transparent
+* change background of selected items to transparent or light
