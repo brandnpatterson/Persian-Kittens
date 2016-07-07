@@ -1,8 +1,8 @@
 {
-  "name": "cats",
+  "name": "persian-kittens",
   "private": true,
-  "dependencies": {},
-  "devDependencies": {
-
-  }
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {}
 }

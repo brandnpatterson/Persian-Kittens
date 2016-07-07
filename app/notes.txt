@@ -1,18 +1,13 @@
-//    General Notes    //
+/// To Do ///
 
-* Home Page - white looks plain
+* make background of navigation dropdown transparent
+* change background of selected items to transparent or light
+* find a bigger picture for the background
+* make the background responsive
+* add gallery
+* add about
+* add contact
+* add footer
 
-* Home Page - Add Logo
 
-
-//    Done    //
-
-* Bootstrap Layout
-
-* Index
-
-* Gallery Pages
-
-* About, Contact Pages
-
-* Modal
+/// Complete ///

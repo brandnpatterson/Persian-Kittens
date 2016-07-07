@@ -1,20 +1,14 @@
 //    footer    //
-footer {
-  padding-top: 30px;
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
+footer li {
+  display: inline-block;
+  padding: 5%;
+}
 footer p {
   color: #777;
-}
-
-#footer {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  width: 70%;
-}
-
-.footer-buffer {
-  max-width: 100%;
-  padding: 0;
 }
