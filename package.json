@@ -1,7 +1,7 @@
 {
-  "name": "persian-kittens",
+  "name": "zina-s-cattery",
   "author": "Brandon Patterson",
-  "description": "Cat Website for Lauren White",
+  "description": "Web Gallery for the sale of Persian Kittens in the Houston, TX area",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "license": "ISC",
