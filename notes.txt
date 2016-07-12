@@ -1,17 +1,18 @@
-/// General ///
-* Made commit, did not push 7/7/16 12am
+//    General Notes    //
 
-/// To Do ///
+* Home Page - white looks plain
 
-* find a bigger picture for the background
-* make the background responsive
-* add gallery
-* add about
-* add contact
-* add footer
+* Home Page - Add Logo
 
 
-/// Complete ///
+//    Done    //
 
-* make background of navigation dropdown transparent
-* change background of selected items to transparent or light
+* Bootstrap Layout
+
+* Index
+
+* Gallery Pages
+
+* About, Contact Pages
+
+* Modal
