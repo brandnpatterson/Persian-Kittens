@@ -34,6 +34,12 @@
 }
 
 
+//    strong    //
+strong {
+  color: #333;
+}
+
+
 //    about    //
 #about {
   background-color: #fff;
@@ -74,27 +80,21 @@
 }
 
 
-//    title    //
-.title-males, .title-females, .title-gray, .title-white, .title-shows {
+//    header    //
+header {
   background-color: #f5f5dc;
   color: #333;
   display: block;
   font-family: $stack-noto;
   margin-top: 200px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 50px;
   text-align: center;
-}
-
-strong {
-  color: #333;
 }
 
 
 //    image    //
 .image {
   display: block;
-  margin: 0 auto;
   max-width: 700px;
   text-align: center;
 }
