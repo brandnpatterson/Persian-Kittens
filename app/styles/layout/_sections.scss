@@ -1,3 +1,11 @@
+//    background    //
+.background {
+  background: url("../../images/showcase.jpg") no-repeat center;
+  background-size: 100%;
+  background-position: top;
+  height: 100%;
+}
+
 //    jumbotron    //
 .jumbotron {
   background: transparent;
@@ -16,10 +24,24 @@
 }
 
 
-//    males    //
+//    male    //
 .male {
-  padding: 100px;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: 100px;
+  text-align: center;
 }
+
 .male img {
-  max-width: 100%;
+  border-radius: 30px;
+  max-width: 70%;
+}
+
+
+//    male-1    //
+.male-1-2 {
+  background-color: $light-red;
+  height: 500px;
+  width: 100%;
 }
