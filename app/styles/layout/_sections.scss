@@ -2,13 +2,17 @@
   padding: 0;
 }
 
-
 //    background    //
 .background {
   background: url("../../images/showcase.jpg") no-repeat center transparent;
+  background-color: #333;
   background-size: 100%;
   background-position: top;
-  height: 1000px;
+  border-radius: 30px;
+  height: 865px;
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 1300px;
 }
 
 //    jumbotron    //
@@ -28,51 +32,101 @@
   margin-top: 100px;
 }
 
+//    backUp    //
+.backUp {
+  background-color: #333;
+  border-radius: 60px;
+  color: #fff;
+  font-size: 30px;
+  margin-top: 0;
+  margin-left: 1350px;
+  padding: 20px;
+  position: fixed;
+}
 
+
+//    about    //
+#about {
+  background-color: #fff;
+  margin-top: 200px;
+  height: 700px;
+}
+
+#about .header-main {
+  font-family: $stack-noto;
+  font-size: 40px;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 150px 0 0 100px;
+}
+
+#about h2 {
+  font-family: $stack-noto;
+  font-size: 40px;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 20px 0 20px 100px;
+}
+
+#about p {
+  font-size: 20px;
+  margin: 0 auto;
+  max-width: 960px;
+  padding-top: 20px;
+  text-indent: 50px;
+}
+
+.background-about {
+  background-color: #f5f5dc;
+  border-radius: 30px;
+  padding-bottom: 100px;
+  padding-top: 30px;
+}
 
 //    title    //
 .title-males {
-  background-color: $light-teal-op;
-  border-bottom: #000 solid 2px;
-  color: #eee;
+  background-color: #f5f5dc;
+  border-radius: 30px;
+  color: #333;
   display: block;
   font-family: $stack-noto;
-  margin-top: 20px;
+  margin-top: 200px;
   padding-top: 20px;
-  padding-bottom: 0;
+  padding-bottom: 20px;
   text-align: center;
-  width: 100%;
 }
 
 .title-females, .title-gray, .title-shows {
-  background-color: $light-teal-op;
-  border-bottom: #000 solid 2px;
-  color: #eee;
+  background-color: #f5f5dc;
+  border-radius: 30px;
+  color: #333;
   display: block;
   font-family: $stack-noto;
   height: 55px;
+  margin-top: 900px;
   padding-top: 20px;
-  padding-bottom: 0;
+  padding-bottom: 20px;
   text-align: center;
 }
 
 .title-white {
-  background-color: $light-teal-op;
-  border-bottom: #000 solid 2px;
-  color: #eee;
+  background-color: #f5f5dc;
+  border-radius: 30px;
+  color: #333;
   display: block;
   font-family: $stack-noto;
   height: 55px;
-  padding-bottom: 0;
+  margin-top: 900px;
+  padding-bottom: 20px;
   padding-top: 20px;
   text-align: center;
 }
 
 strong {
-  color: #000;
+  color: #333;
 }
 
-//    male    //
+//    image    //
 .image {
   display: block;
   max-width: 700px;
@@ -81,6 +135,10 @@ strong {
 
 .image img {
   border-radius: 30px;
-  margin: 1%;
-  max-width: 50%;
+  margin: 6%;
+  max-width: 80%;
+}
+
+#females {
+  background: #fff;
 }
