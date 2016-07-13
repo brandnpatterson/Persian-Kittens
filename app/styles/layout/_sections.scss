@@ -18,30 +18,34 @@
 .jumbotron h1 {
   background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
   color: #eee;
-  font-family: 'chantelli_antiquaregular', sans-serif;
+  font-family: $stack-chantelli;
   font-size: 40px;
   margin-top: 100px;
 }
 
 
-//    male    //
-.male {
+
+//    title    //
+.title {
+  border-bottom: #333 solid 2px;
   display: block;
-  margin: 0 auto;
-  max-width: 800px;
-  padding-top: 100px;
+  font-family: $stack-noto;
+  padding-top: 20px;
+  padding-bottom: 0;
   text-align: center;
 }
 
-.male img {
-  border-radius: 30px;
-  max-width: 70%;
+
+//    male    //
+.image {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 40px 0 120px;
+  text-align: center;
 }
 
-
-//    male-1    //
-.male-1-2 {
-  background-color: $light-red;
-  height: 500px;
-  width: 100%;
+.image img {
+  border-radius: 30px;
+  max-width: 70%;
 }
