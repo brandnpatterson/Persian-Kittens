@@ -108,3 +108,29 @@ header {
 #females {
   background: #fff;
 }
+
+
+//    backUp    //
+
+#backUp {
+  border: 2px solid #333;
+  border-radius: 30px;
+  margin-left: 20px;
+  padding: 8px;
+  position: fixed;
+  z-index: 10;
+}
+
+#backUp .glyphicon {
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+#backUp p {
+  font-size: 12px;
+}
+
+#backUp {
+  color: inherit;
+  text-decoration: none;
+}
