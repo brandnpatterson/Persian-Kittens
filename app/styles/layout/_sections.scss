@@ -1,9 +1,14 @@
+#wrapper {
+  padding: 0;
+}
+
+
 //    background    //
 .background {
-  background: url("../../images/showcase.jpg") no-repeat center;
+  background: url("../../images/showcase.jpg") no-repeat center transparent;
   background-size: 100%;
   background-position: top;
-  height: 100%;
+  height: 1000px;
 }
 
 //    jumbotron    //
@@ -26,26 +31,56 @@
 
 
 //    title    //
-.title {
-  border-bottom: #333 solid 2px;
+.title-males {
+  background-color: $light-teal-op;
+  border-bottom: #000 solid 2px;
+  color: #eee;
   display: block;
   font-family: $stack-noto;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.title-females, .title-gray, .title-shows {
+  background-color: $light-teal-op;
+  border-bottom: #000 solid 2px;
+  color: #eee;
+  display: block;
+  font-family: $stack-noto;
+  height: 55px;
   padding-top: 20px;
   padding-bottom: 0;
   text-align: center;
 }
 
+.title-white {
+  background-color: $light-teal-op;
+  border-bottom: #000 solid 2px;
+  color: #eee;
+  display: block;
+  font-family: $stack-noto;
+  height: 55px;
+  padding-bottom: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+strong {
+  color: #000;
+}
 
 //    male    //
 .image {
   display: block;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 40px 0 120px;
+  max-width: 700px;
   text-align: center;
 }
 
 .image img {
   border-radius: 30px;
-  max-width: 70%;
+  margin: 1%;
+  max-width: 50%;
 }
