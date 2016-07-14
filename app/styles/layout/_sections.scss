@@ -34,17 +34,37 @@
 }
 
 
-//    strong    //
-strong {
-  color: #333;
+//    backUp    //
+
+#backUp {
+  border: 2px solid #333;
+  border-radius: 30px;
+  margin-left: 1040px;
+  padding: 8px;
+  position: fixed;
+  z-index: 10;
 }
 
+#backUp .glyphicon {
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+#backUp p {
+  font-size: 12px;
+}
+
+#backUp {
+  color: inherit;
+  text-decoration: none;
+}
 
 //    about    //
 #about {
-  background-color: #fff;
+  background-color: rgba(245, 245, 220, .89);
   margin-bottom: 200px;
   margin-top: 200px;
+  padding-top: 100px;
   height: 700px;
 }
 
@@ -73,16 +93,15 @@ strong {
   text-indent: 50px;
 }
 
-.background-about {
-  background-color: #f5f5dc;
-  padding-bottom: 100px;
-  padding-top: 30px;
+//    strong    //
+strong {
+  color: #333;
 }
 
 
 //    header    //
 header {
-  background-color: #f5f5dc;
+  background-color: rgba(245, 245, 220, .89);
   color: #333;
   display: block;
   font-family: $stack-noto;
@@ -102,35 +121,13 @@ header {
 .image img {
   border-radius: 30px;
   margin: 6%;
-  max-width: 80%;
-}
-
-#females {
-  background: #fff;
+  max-width: 70%;
 }
 
 
-//    backUp    //
-
-#backUp {
-  border: 2px solid #333;
-  border-radius: 30px;
-  margin-left: 20px;
-  padding: 8px;
-  position: fixed;
-  z-index: 10;
-}
-
-#backUp .glyphicon {
-  font-size: 30px;
-  margin-left: 15px;
-}
-
-#backUp p {
-  font-size: 12px;
-}
-
-#backUp {
-  color: inherit;
-  text-decoration: none;
+//    contact    //
+#contact-info {
+  height: 600px;
+  margin-top: 50px;
+  text-align: center;
 }
