@@ -132,7 +132,7 @@ gulp.task('serve:dist', () => {
 });
 
 // Delete dist and .tmp folders
-gulp.task('clean', del.bind(null, ['.tmp', 'dist/fonts', 'dist/images', 'dist/styles', 'dist/scrips/main.min.js', 'index.html', 'app/scripts/main.js', 'app/scripts/main.min.js']));
+gulp.task('clean', del.bind(null, ['.tmp', 'app/scripts/main.js', 'app/scripts/main.min.js', 'app/styles/main.css', 'dist/fonts', 'dist/images', 'dist/styles', 'dist/scrips/main.min.js']));
 
 // Create dist .tmp files/folders
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {

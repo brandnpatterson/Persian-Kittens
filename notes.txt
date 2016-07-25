@@ -16,3 +16,5 @@
 * About, Contact Pages
 
 * Modal
+
+* Optimized source paths for images and fonts
