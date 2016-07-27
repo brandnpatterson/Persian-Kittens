@@ -1,12 +1,12 @@
 {
-  "name": "tad",
+  "name": "zina-s-cattery",
   "author": "Brandon Patterson",
-  "description": "Texas Assistive Devices - Website for an Orthopedic Care Company",
+  "description": "Web Gallery for the sale of Persian Kittens in the Houston, TX area",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "license": "ISC",
-  "url": "https://github.com/brandnpatterson/TAD/issues",
-  "homepage": "https://github.com/brandnpatterson/TAD#readme",
+  "url": "https://github.com/brandnpatterson/Zina-s-cattery/issues",
+  "homepage": "https://github.com/brandnpatterson/Zina-s-cattery#readme",
   "private": true,
   "engines": {
     "node": ">=4"
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson/Portfolio.git"
+    "url": "git+https://github.com/brandnpatterson/Zina-s-cattery.git"
   },
   "eslintConfig": {
     "env": {
