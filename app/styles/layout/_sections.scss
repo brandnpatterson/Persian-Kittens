@@ -20,6 +20,7 @@
 .jumbotron {
   background: transparent;
   margin: 0 auto;
+  margin-bottom: 450px;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -63,9 +64,8 @@
 //    about    //
 #about {
   background-color: rgba(245, 245, 220, .89);
-  margin-bottom: 200px;
-  margin-top: 200px;
-  padding-top: 100px;
+  margin-bottom: 150px;
+  margin-top: 100px;
   height: 700px;
 }
 
@@ -76,7 +76,6 @@
   max-width: 80%;
   padding: 30px 0 20px 20px;
 }
-
 #about h2 {
   font-family: $stack-noto;
   font-size: 40px;
@@ -102,13 +101,7 @@ strong {
 
 //    header    //
 header {
-  background-color: rgba(245, 245, 220, .89);
-  color: #333;
-  display: block;
-  font-family: $stack-noto;
-  margin-top: 200px;
-  margin-bottom: 50px;
-  text-align: center;
+
 }
 
 
@@ -124,6 +117,15 @@ header {
   max-width: 70%;
 }
 
+.col-sm-12 {
+  background-color: rgba(245, 245, 220, .89);
+  color: #333;
+  display: block;
+  font-family: $stack-noto;
+  margin-bottom: 50px;
+  max-height: 70px;
+  text-align: center;
+}
 
 //    contact    //
 #contact-info {

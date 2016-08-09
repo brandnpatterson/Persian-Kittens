@@ -5,6 +5,17 @@
   }
 }
 
+@media screen and (max-width: 518px) {
+
+  #about {
+    height: 980px;
+  }
+
+  .jumbotron {
+    margin-bottom: 350px;
+  }
+}
+
 @media screen and (min-width: 640px) {
 
   .jumbotron h1 {
@@ -20,10 +31,10 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
 
-  .title-females {
-    margin-top: 200px;
+  #about p {
+    font-size: 16px;
   }
 }
 
