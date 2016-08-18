@@ -1,42 +1,53 @@
-//    wrapper    //
-#wrapper {
-  padding: 0;
-}
-
-
-//    background    //
-.background {
-  background: url("../images/showcase.jpg") no-repeat center transparent;
-  background-size: 100%;
-  background-position: top;
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 50px;
-  width: 100%;
-}
-
-
-//    jumbotron    //
-.jumbotron {
-  background: transparent;
-  margin: 0 auto;
-  margin-bottom: 450px;
-  padding-left: 0;
-  padding-right: 0;
+header {
+  background-color: rgba(245, 245, 220, .89);
+  color: #333;
+  display: block;
+  font-family: $stack-noto;
+  margin-bottom: 50px;
+  max-height: 70px;
   text-align: center;
 }
 
-.jumbotron h1 {
-  background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
-  color: #eee;
-  font-family: $stack-chantelli;
+//    strong    //
+strong {
+  color: #333;
+}
+
+
+//    about    //
+#about {
+  background-color: rgba(245, 245, 220, .89);
+  margin-bottom: 150px;
+  height: 750px;
+}
+
+#about .header-main {
+  font-family: $stack-noto;
   font-size: 40px;
-  margin-top: 40px;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 30px 0 20px 20px;
+}
+
+#about h2 {
+  font-family: $stack-noto;
+  font-size: 40px;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px 0 20px 20px;
+}
+
+#about p {
+  font-size: 20px;
+  margin: 0 auto;
+  max-width: 80%;
+  padding-top: 20px;
+  text-align: justify;
+  text-indent: 50px;
 }
 
 
 //    backUp    //
-
 #backUp {
   border: 2px solid #333;
   border-radius: 30px;
@@ -61,41 +72,40 @@
   text-decoration: none;
 }
 
-//    about    //
-#about {
-  background-color: rgba(245, 245, 220, .89);
-  margin-bottom: 150px;
-  margin-top: 100px;
-  height: 750px;
+
+//    contact    //
+#contact-info {
+  height: 600px;
+  margin-top: 50px;
+  text-align: center;
 }
 
-#about .header-main {
-  font-family: $stack-noto;
+
+//    logo    //
+#logo {
+  background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
+  color: #eee;
+  font-family: $stack-chantelli;
   font-size: 40px;
-  margin: 0 auto;
-  max-width: 80%;
-  padding: 30px 0 20px 20px;
-}
-#about h2 {
-  font-family: $stack-noto;
-  font-size: 40px;
-  margin: 0 auto;
-  max-width: 80%;
-  padding: 20px 0 20px 20px;
+  margin-bottom: 20%;
 }
 
-#about p {
-  font-size: 20px;
+
+//    wrapper    //
+#wrapper {
+  padding: 0;
+}
+
+
+//    background    //
+.background {
+  background: url("../images/showcase.jpg") no-repeat center transparent;
+  background-size: 100%;
+  background-position: top;
+  height: 100%;
   margin: 0 auto;
-  max-width: 80%;
   padding-top: 20px;
-  text-align: justify;
-  text-indent: 50px;
-}
-
-//    strong    //
-strong {
-  color: #333;
+  width: 100%;
 }
 
 
@@ -111,19 +121,10 @@ strong {
   max-width: 70%;
 }
 
-.header {
-  background-color: rgba(245, 245, 220, .89);
-  color: #333;
-  display: block;
-  font-family: $stack-noto;
-  margin-bottom: 50px;
-  max-height: 70px;
-  text-align: center;
-}
 
-//    contact    //
-#contact-info {
-  height: 600px;
-  margin-top: 50px;
+//    jumbotron    //
+.jumbotron {
+  background: transparent;
+  margin: 0 auto;
   text-align: center;
 }

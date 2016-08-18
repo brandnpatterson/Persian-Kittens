@@ -1,5 +1,4 @@
 //    color variables    //
-
 $light-teal   : #68B6CB;
 $light-teal-op : rgba( 104, 182 ,203, .1 );
 $dark-teal    : #20717C;
@@ -8,6 +7,11 @@ $dark-red     : #3C1A09;
 
 
 //    font variables    //
-
 $stack-chantelli    : 'chantelli_antiquaregular', 'noto_serifregular', sans-serif;
 $stack-noto         : 'noto_serifregular', sans-serif;
+
+
+//    media query variables    //
+$iPhone: "(min-width: 400px) and (max-width: 500px)";
+$iPad: "(min-width: 500px) and (max-width: 1040px)";
+$desktop: "(min-width: 1040px)";
