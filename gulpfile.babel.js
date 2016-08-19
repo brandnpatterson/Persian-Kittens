@@ -1,63 +1,55 @@
-var             gulp = require('gulp');
-              concat = require('gulp-concat');
-              rename = require('gulp-rename');
-                sass = require('gulp-sass');
-              uglify = require('gulp-uglify');
-     gulpLoadPlugins = require('gulp-load-plugins');
-         browserSync = require('browser-sync');
-                 del = require('del');
-             wiredep = require('wiredep').stream;
+import babel from 'gulp-babel'
+import browserSync from 'browser-sync'
+import concat from 'gulp-concat'
+import del from 'del'
+import gulp from 'gulp'
+import load from 'gulp-load-plugins'
+import sass from 'gulp-sass'
+import wiredep  from 'wiredep'
 
-const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
+const $ = load()
+const reload = browserSync.reload
 
-// Convert all sass files into minified css files
-gulp.task('styles', function() {
+gulp.task('styles', () => {
   gulp.src('app/styles/**/*.scss')
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(gulp.dest('app/styles'))
-  .pipe(gulp.dest('dist/styles'));
-});
+  .pipe(gulp.dest('dist/styles'))
+})
 
 // JS
 gulp.task('scripts', () => {
-
-    // Concatinate JS files into main.js
     gulp.src('./app/scripts/main.js')
     gulp.src('./app/scripts/*.js')
     .pipe(concat('main.js'))
-
-    // Uglify main.js into main.min.js
     .pipe(gulp.dest('./app/scripts'))
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+    .pipe($.uglify())
+    .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(gulp.dest('app/scripts'))
 
-    // Create sourcemaps for JS files
   return gulp.src('app/scripts/*.js')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
-});
+    .pipe(reload({stream: true}))
+})
 
-// Lint JS files
 function lint(files, options) {
   return gulp.src(files)
     .pipe(reload({stream: true, once: true}))
     .pipe($.eslint(options))
     .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+    .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
 }
 
 gulp.task('lint', () => {
   return lint('app/scripts/*.js', {
     fix: true
   })
-    .pipe(gulp.dest('app/scripts'));
-});
+    .pipe(gulp.dest('app/scripts'))
+})
 
 gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/*.html')
@@ -65,27 +57,25 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
-    .pipe(gulp.dest('dist'));
-});
+    .pipe(gulp.dest('dist'))
+})
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
       svgoPlugins: [{cleanupIDs: false}]
     })))
-    .pipe(gulp.dest('dist/images'));
-});
+    .pipe(gulp.dest('dist/images'))
+})
 
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
     .concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
-});
+    .pipe(gulp.dest('dist/fonts'))
+})
 
 gulp.task('extras', () => {
   return gulp.src([
@@ -93,10 +83,9 @@ gulp.task('extras', () => {
     '!app/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
-});
+  }).pipe(gulp.dest('dist'))
+})
 
-// Start server with app files
 gulp.task('serve', () => {
   browserSync({
     notify: false,
@@ -107,20 +96,19 @@ gulp.task('serve', () => {
         '/bower_components': 'bower_components'
       }
     }
-  });
+  })
 
   gulp.watch([
     'app/*.html',
     'app/styles/**/*.scss'
-  ]).on('change', reload);
+  ]).on('change', reload)
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch('app/fonts/**/*', ['fonts']);
-  gulp.watch('bower.json', ['wiredep', 'fonts']);
-});
+  gulp.watch('app/styles/**/*.scss', ['styles'])
+  gulp.watch('app/scripts/**/*.js', ['scripts'])
+  gulp.watch('app/fonts/**/*', ['fonts'])
+  gulp.watch('bower.json', ['wiredep', 'fonts'])
+})
 
-// Start server with dist files
 gulp.task('serve:dist', () => {
   browserSync({
     notify: false,
@@ -131,18 +119,15 @@ gulp.task('serve:dist', () => {
         '/bower_components': 'bower_components'
       }
     }
-  });
-});
+  })
+})
 
-// Delete dist and .tmp folders
 gulp.task('clean', del.bind(null, ['.tmp', 'app/scripts/main.js', 'app/scripts/main.min.js', 'app/styles/main.css', 'dist/fonts', 'dist/images', 'dist/styles', 'dist/scrips/main.min.js']));
 
-// Create dist .tmp files/folders
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-// Delete dist and .tmp files/folders and create them again
 gulp.task('default', ['clean'], () => {
-  gulp.start('build');
-});
+  gulp.start('build')
+})
