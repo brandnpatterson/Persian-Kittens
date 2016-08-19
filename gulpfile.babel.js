@@ -124,7 +124,7 @@ gulp.task('serve:dist', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'app/scripts/main.js', 'app/scripts/main.min.js', 'app/styles/main.css', 'dist/fonts', 'dist/images', 'dist/styles', 'dist/scrips/main.min.js']));
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'serve'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
