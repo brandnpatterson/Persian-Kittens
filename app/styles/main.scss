@@ -1,2 +1,10 @@
-@import 'base/_index.scss';
-@import 'layout/_index.scss';
+@import "0-tools/_normalize";
+
+@import "1-base/_base";
+@import "1-base/_variables";
+
+@import "2-layout/_nav";
+@import "2-layout/_sections";
+@import "2-layout/_modal";
+@import "2-layout/_footer";
+@import "2-layout/_media";
