@@ -8,13 +8,10 @@ header {
   text-align: center;
 }
 
-//    strong    //
 strong {
   color: #333;
 }
 
-
-//    about    //
 #about {
   background-color: rgba(245, 245, 220, .89);
   margin-bottom: 150px;
@@ -46,8 +43,6 @@ strong {
   text-indent: 50px;
 }
 
-
-//    backUp    //
 #backUp {
   border: 2px solid #333;
   border-radius: 30px;
@@ -72,16 +67,12 @@ strong {
   text-decoration: none;
 }
 
-
-//    contact    //
 #contact-info {
   height: 600px;
   margin-top: 50px;
   text-align: center;
 }
 
-
-//    logo    //
 #logo {
   background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
   color: #eee;
@@ -90,14 +81,10 @@ strong {
   margin-bottom: 20%;
 }
 
-
-//    wrapper    //
 #wrapper {
   padding: 0;
 }
 
-
-//    background    //
 .background {
   background: url("../images/showcase.jpg") no-repeat center transparent;
   background-size: 100%;
@@ -108,8 +95,6 @@ strong {
   width: 100%;
 }
 
-
-//    image    //
 .image {
   display: block;
   text-align: center;
@@ -117,12 +102,10 @@ strong {
 
 .image img {
   border-radius: 30px;
-  margin: 6%;
+  margin: 10%;
   max-width: 70%;
 }
 
-
-//    jumbotron    //
 .jumbotron {
   background: transparent;
   margin: 0 auto;
