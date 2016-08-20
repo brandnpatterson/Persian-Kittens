@@ -17,12 +17,10 @@ gulp.task('styles', () => {
   .pipe(gulp.dest('dist/styles'))
 })
 
-// JS
 gulp.task('scripts', () => {
-    gulp.src('./app/scripts/main.js')
-    gulp.src('./app/scripts/*.js')
+    return gulp.src('./app/scripts/back-up.js')
+    .pipe(gulp.dest('app/scripts'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./app/scripts'))
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/scripts'))
@@ -54,8 +52,6 @@ gulp.task('lint', () => {
 gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'))
 })
@@ -122,7 +118,7 @@ gulp.task('serve:dist', () => {
   })
 })
 
-gulp.task('clean', del.bind(null, ['.tmp', 'app/scripts/main.js', 'app/scripts/main.min.js', 'app/styles/main.css', 'dist/fonts', 'dist/images', 'dist/styles', 'dist/scrips/main.min.js']));
+gulp.task('clean', del.bind(null, ['.tmp', 'app/scripts/*.min.js', 'app/styles/main.css', 'dist']));
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'serve'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
