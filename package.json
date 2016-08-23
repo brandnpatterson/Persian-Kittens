@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson/Zina-s-cattery.git"
+    "url": "git+https://github.com/brandnpatterson/Zinas-cattery.git"
   },
   "eslintConfig": {
     "env": {
