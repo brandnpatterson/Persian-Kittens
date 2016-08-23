@@ -1,12 +1,12 @@
 {
-  "name": "zina-s-cattery",
+  "name": "zinas-cattery",
   "author": "Brandon Patterson",
   "description": "Web Gallery for the sale of Persian Kittens in the Houston, TX area",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "license": "ISC",
-  "url": "https://github.com/brandnpatterson/Zina-s-cattery/issues",
-  "homepage": "https://github.com/brandnpatterson/Zina-s-cattery#readme",
+  "url": "",
+  "homepage": "https://brandnpatterson.github.io/zinas-cattery",
   "private": true,
   "engines": {
     "node": ">=4"

@@ -10,7 +10,7 @@ import      sync from "browser-sync"
 const $ = load()
 const reload = sync.reload
 
-gulp.task('clean', del.bind(null, ['app/styles/*.css', 'app/js/main.min.js', 'app/js/**.min.js', 'dist/fonts', 'dist/css/style.min.css'], {read: false}))
+gulp.task('clean', del.bind(null, ['app/css/style.min.css', 'app/js/main.js', 'app/js/main.min.js', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
 gulp.task('default', ['html', 'dep', 'fonts', 'images'], () => {
   gulp.start('serve')
@@ -51,8 +51,9 @@ gulp.task('serve', () => {
     }
   })
 
-  gulp.watch(['app/*.html', 'app/styles/**/*.sass', 'app/js/*.min.js']).on('change', reload)
-  gulp.watch('app/styles/**/*.sass', ['styles'])
+  gulp.watch(['app/*.html', 'app/css/**/*.sass', 'app/css/**/*.scss', 'app/js/*.min.js']).on('change', reload)
+  gulp.watch('app/css/**/*.sass', ['styles'])
+  gulp.watch('app/css/**/*.scss', ['styles'])
   gulp.watch('app/js/*.js', ['scripts'])
 })
 
