@@ -1,6 +1,9 @@
+/* eslint-env node */
+
 import      gulp from "gulp"
 import    concat from "gulp-concat"
 import       del from "del"
+import    eslint from "gulp-eslint"
 import      load from "gulp-load-plugins"
 import    prefix from "gulp-autoprefixer"
 import    rename from "gulp-rename"
@@ -10,26 +13,27 @@ import      sync from "browser-sync"
 const $ = load()
 const reload = sync.reload
 
+gulp.task('build', ['html', 'fonts', 'images'])
+
 gulp.task('clean', del.bind(null, ['app/css/style.min.css', 'app/js/main.js', 'app/js/main.min.js', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
-gulp.task('default', ['html', 'dep', 'fonts', 'images'], () => {
+gulp.task('default', ['html', 'lint', 'fonts', 'images'], () => {
   gulp.start('serve')
 })
 
-gulp.task('dep', () => {
-  return gulp.src(['app/dep/**.*'])
-  .pipe(gulp.dest('dist/dep'))
+gulp.task('dist', ['clean'], () => {
+  gulp.start('serve:dist', ['build'])
 })
 
 gulp.task('fonts', () => {
-    gulp.src(['app/fonts/**.eot', 'app/fonts/**.otf', 'app/fonts/**.svg', 'app/fonts/**.ttf', 'app/fonts/**.woff', 'app/fonts/**.woff2'])
-    .pipe(gulp.dest('dist/fonts'))
+  gulp.src(['app/fonts/**.eot', 'app/fonts/**.otf', 'app/fonts/**.svg', 'app/fonts/**.ttf', 'app/fonts/**.woff', 'app/fonts/**.woff2'])
+  .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('html', ['scripts', 'styles'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['app']}))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'))
 })
 
@@ -41,6 +45,13 @@ gulp.task('images', () => {
       svgoPlugins: [{cleanupIDs: false}]
     })))
     .pipe(gulp.dest('dist/images'))
+})
+
+gulp.task('lint', () => {
+  return gulp.src(['*/**/*.js', '!node_modules/**', '!test/**', '!*/js/jquery/*', '!*/js/bootstrap/*'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
 })
 
 gulp.task('serve', () => {
