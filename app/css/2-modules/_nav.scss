@@ -76,3 +76,7 @@ hr {
 .dropdown-menu li:hover {
   background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
 }
+
+.dropdown-backdrop {
+    position: static;
+}
