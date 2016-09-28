@@ -3,14 +3,10 @@
   "author": "Brandon Patterson",
   "description": "Web Gallery for the sale of Persian Kittens in the Houston, TX area",
   "version": "1.0.0",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "license": "ISC",
   "url": "",
-  "homepage": "https://brandnpatterson.github.io/zinas-cattery",
-  "private": true,
-  "engines": {
-    "node": ">=4"
-  },
+  "homepage": "https://brandnpatterson.com/zinas-cattery",
   "dependencies": {
     "jquery": "^3.1.0"
   },
@@ -39,24 +35,8 @@
     "gulp-useref": "^3.0.0",
     "gulp-watch": "^4.3.8"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson/Zinas-cattery.git"
-  },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true,
-      "browser": true
-    }
-  },
-  "rules": {
-    "quotes": [
-      2,
-      "single"
-    ]
+    "url": "git+https://github.com/brandnpatterson/zinas.git"
   }
 }
