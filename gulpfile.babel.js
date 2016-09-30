@@ -15,9 +15,9 @@ const reload = sync.reload
 
 gulp.task('build', ['html', 'lint', 'fonts', 'images'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'app/js/main.js', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/js/main.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/js/main.min.js'], {read: false}))
 
-gulp.task('default', ['html', 'lint', 'fonts', 'images'], () => {
+gulp.task('default', ['html', 'lint', 'fonts', 'images', 'watch'], () => {
   gulp.start('serve')
 })
 
@@ -57,11 +57,6 @@ gulp.task('serve', () => {
       baseDir: './'
     }
   })
-
-  gulp.watch(['app/*.html', 'app/css/**/*.sass', 'app/css/**/*.scss', 'app/js/*.min.js']).on('change', reload)
-  gulp.watch('app/css/**/*.sass', ['styles'])
-  gulp.watch('app/css/**/*.scss', ['styles'])
-  gulp.watch('app/js/*.js', ['scripts'])
 })
 
 gulp.task('scripts', () => {
@@ -79,4 +74,10 @@ gulp.task('styles', () => {
   .pipe(prefix('last 2 versions'))
   .pipe(gulp.dest('dist/css'))
   .pipe(reload({stream: true}))
+})
+
+gulp.task('watch', () => {
+  gulp.watch('app/*.html', ['html', reload])
+  gulp.watch('app/css/**/*.scss', ['styles', reload])
+  gulp.watch('app/js/*.js', ['scripts', reload])
 })
