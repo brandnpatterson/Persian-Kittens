@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-  $("#backUp").hide();
+  $('#back-up').hide()
 
   $(window).scroll(function() {
     if ($(window).scrollTop() > 800) {
-      $("#backUp").fadeIn("slow");
+      $('#back-up').fadeIn('slow')
     }
     else {
-      $("#backUp").fadeOut("fast");
+      $('#back-up').fadeOut('fast')
     }
-  });
-});
+  })
+})

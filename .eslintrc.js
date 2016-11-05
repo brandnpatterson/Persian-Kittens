@@ -1,6 +1,7 @@
 module.exports = {
     "env": {
         "browser": true,
+        "es6": true,
         "jquery": true
     },
     "extends": "eslint:recommended",
@@ -15,11 +16,11 @@ module.exports = {
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
-            "always"
+            "never"
         ]
     }
 };
