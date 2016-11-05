@@ -21,7 +21,7 @@ gulp.task('default', ['clean', 'html', 'lint', 'fonts', 'images', 'watch'], () =
 })
 
 gulp.task('fonts', () => {
-  gulp.src(['app/fonts/**.eot', 'app/fonts/**.svg','app/fonts/**.ttf', 'app/fonts/**.woff'])
+  gulp.src(['app/fonts/**.eot', 'app/fonts/**.svg','app/fonts/**.ttf', 'app/fonts/**.woff?'])
   .pipe(gulp.dest('dist/fonts'))
 })
 
