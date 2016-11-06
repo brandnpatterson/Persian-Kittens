@@ -14,14 +14,14 @@ const reload = sync.reload
 
 gulp.task('build', ['html', 'lint', 'fonts', 'images'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'app/assets/html/*.html', 'dist/css/style.min.css', 'dist/fonts/*', 'dist/html/*', 'dist/images/*', 'dist/js/main.min.js'], {read: false}))
 
-gulp.task('default', ['clean', 'html', 'lint', 'fonts', 'images', 'watch'], () => {
+gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
 })
 
 gulp.task('fonts', () => {
-  gulp.src(['app/fonts/**.eot', 'app/fonts/**.svg','app/fonts/**.ttf', 'app/fonts/**.woff?'])
+  gulp.src(['app/fonts/*.eot', 'app/fonts/*.svg','app/fonts/*.ttf', 'app/fonts/*.woff', 'app/fonts/*.woff2'])
   .pipe(gulp.dest('dist/fonts'))
 })
 
@@ -35,7 +35,7 @@ gulp.task('html', ['scripts', 'styles'], () => {
 })
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
+  return gulp.src('app/images/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
@@ -45,7 +45,7 @@ gulp.task('images', () => {
 })
 
 gulp.task('lint', () => {
-  return gulp.src(['*/**/*.js', '!node_modules/**', '!test/**'])
+  return gulp.src(['*/**/*.js', '!node_modules/*', '!test/*'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())

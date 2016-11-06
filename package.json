@@ -17,6 +17,8 @@
   "url": "http://brandnpatterson.com/zinas",
   "homepage": "http://brandnpatterson.com/zinas",
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
