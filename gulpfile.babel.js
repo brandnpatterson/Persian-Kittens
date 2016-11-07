@@ -51,6 +51,8 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError())
 })
 
+gulp.task('rebuild', ['clean', 'default'])
+
 gulp.task('scripts', () => {
   return gulp.src('app/js/*.js')
     .pipe(sourcemaps.init())
