@@ -1,3 +1,7 @@
+/**
+ * Animates the scrolling navigation
+ */
+
 var Animate = (function() {
 
   // cacheDOM
