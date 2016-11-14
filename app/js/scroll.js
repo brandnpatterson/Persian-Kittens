@@ -1,6 +1,5 @@
-$('.nav-scroll').click( () => { // when any .nav-scroll is clicked
-  var $this = this;
+$('.nav-scroll').click(function() { // when any .nav-scroll is clicked
 
-  var scrollId = $($this).attr('data-click');
+  var scrollId = $(this).attr('data-click');
   $('body').animate({scrollTop: $('#'+scrollId).offset().top}, 1000);
 });
