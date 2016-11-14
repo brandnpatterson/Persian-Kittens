@@ -1,28 +1,23 @@
-import       gulp from "gulp"
-import     concat from "gulp-concat"
-import        del from "del"
-import     eslint from "gulp-eslint"
-import       load from "gulp-load-plugins"
-import     prefix from "gulp-autoprefixer"
-import     rename from "gulp-rename"
-import       sass from "gulp-sass"
-import sourcemaps from "gulp-sourcemaps"
-import       sync from "browser-sync"
+import gulp       from 'gulp'
+import concat     from 'gulp-concat'
+import del        from 'del'
+import eslint     from 'gulp-eslint'
+import load       from 'gulp-load-plugins'
+import prefix     from 'gulp-autoprefixer'
+import rename     from 'gulp-rename'
+import sass       from 'gulp-sass'
+import sourcemaps from 'gulp-sourcemaps'
+import sync       from 'browser-sync'
 
 const $ = load()
 const reload = sync.reload
 
-gulp.task('build', ['html', 'lint', 'fonts', 'images'])
+gulp.task('build', ['html', 'lint'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'app/assets/html/*.html', 'dist/css/style.min.css', 'dist/fonts/*', 'dist/html/*', 'dist/images/*', 'dist/js/main.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'app/assets/views/*', 'dist/views/*', 'dist/*.min.js'], {read: false}))
 
 gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
-})
-
-gulp.task('fonts', () => {
-  gulp.src(['app/fonts/*.eot', 'app/fonts/*.svg','app/fonts/*.ttf', 'app/fonts/*.woff', 'app/fonts/*.woff2'])
-  .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('html', ['scripts', 'styles'], () => {
@@ -56,12 +51,12 @@ gulp.task('rebuild', ['clean', 'default'])
 gulp.task('scripts', () => {
   return gulp.src('app/js/*.js')
     .pipe(sourcemaps.init())
-    .pipe(concat('main.js'))
+    .pipe(concat('index.js'))
     .pipe($.babel())
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist'))
 })
 
 gulp.task('serve', () => {
@@ -78,10 +73,9 @@ gulp.task('styles', () => {
   gulp.src('app/css/style.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-  .pipe(rename({suffix: '.min'}))
   .pipe(prefix('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest('./'))
 })
 
 gulp.task('watch', () => {
