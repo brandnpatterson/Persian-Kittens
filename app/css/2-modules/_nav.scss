@@ -7,11 +7,6 @@ hr {
   max-width: 98%;
 }
 
-#navbar a {
-  background-color: transparent;
-  color: #fff;
-}
-
 #navbar-default {
   margin-top: 0;
 }
@@ -23,30 +18,17 @@ hr {
 }
 
 .navbar {
-  background: transparent;
   border: none;
-  font-family: "noto_serifregular", sans-serif;
   font-size: 20px;
   margin: 0 auto;
   max-width: 100%;
 }
 
-.dropdown {
-  background: transparent;
+.dropdown-toggle {
+  cursor: pointer;
 }
 
-.dropdown-menu {
-  width: 80%;
-}
-
-.dropdown-menu {
-  width: 100px;
-}
-
-.dropdown-menu > li > a {
-  font-size: 16px;
-  padding-left: 12px;
-}
+//    dropdown    //
 .dropdown li:first-child {
   padding-top: 10px;
 }
@@ -55,16 +37,9 @@ hr {
   padding-bottom: 15px;
 }
 
-.dropdown-toggle {
-  cursor: pointer;
-}
-
+//    dropdown-menu    //
 .dropdown-menu {
-  background-color: #F8F8FF;
-}
-
-.dropdown-menu {
-  background-color: transparent;    /* 10% opaque gray */
+  width: 80%;
 }
 
 .dropdown-menu li {
@@ -73,8 +48,9 @@ hr {
   padding-top: 10px;
 }
 
-.dropdown-menu li:hover {
-  background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
+.dropdown-menu > li > a {
+  font-size: 16px;
+  padding-left: 12px;
 }
 
 .dropdown-backdrop {

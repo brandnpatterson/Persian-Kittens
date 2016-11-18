@@ -1,0 +1,42 @@
+/*--------------------------*/
+// Colors for all elements //
+/*------------------------*/
+
+footer p,
+strong  {
+  color: $accent-two;
+}
+
+header {
+  background-color: rgba(245, 245, 220, .89);
+  color: $accent-two;
+}
+
+#navbar a {
+  background-color: $transparent;
+  color: $accent;
+}
+
+#logo {
+  background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
+  color: $accent;
+}
+
+#about {
+  background-color: rgba(245, 245, 220, .89);
+}
+
+.dropdown-menu li:hover, {
+  background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
+}
+
+.jumbotron,
+.navbar {
+  background: $transparent;
+}
+
+//    border    //
+#back-up {
+  border: 2px solid $accent-two;
+  color: inherit;
+}

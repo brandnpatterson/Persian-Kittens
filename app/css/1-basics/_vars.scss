@@ -1,15 +1,11 @@
 //    color variables    //
-$light-teal   : #68B6CB;
-$light-teal-op : rgba( 104, 182 ,203, .1 );
-$dark-teal    : #20717C;
-$light-red    : #6A3623;
-$dark-red     : #3C1A09;
-
+$accent-two: #333;
+$accent: #eee;
+$transparent: transparent;
 
 //    font variables    //
-$stack-chantelli    : "chantelli_antiquaregular", "noto_serifregular", sans-serif;
-$stack-noto         : "noto_serifregular", sans-serif;
-
+$stack-primary   : "chantelli_antiquaregular", "noto_serifregular", sans-serif;
+$stack-secondary : "noto_serifregular", sans-serif;
 
 //    media query variables    //
 $iPhone: "(max-width: 500px)";

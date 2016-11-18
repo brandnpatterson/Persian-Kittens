@@ -1,11 +1,3 @@
-body {
-  background: url("dist/images/speckles.png");
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-}
-
 @font-face {
     font-family: "chantelli_antiquaregular";
     src: url("dist/fonts/Chantelli_Antiqua-webfont.eot");
@@ -28,6 +20,18 @@ body {
     font-style: normal;
 }
 
-a {
-  cursor: pointer;
+body {
+  background: url("dist/images/speckles.png");
+  text-decoration: none;
+}
+
+body {
+  font-family: $stack-primary;
+}
+
+header,
+#logo,
+.header-main,
+.navbar {
+  font-family: $stack-secondary;
 }
