@@ -1,13 +1,13 @@
 //    color variables    //
-$accent-two: #333;
-$accent: #eee;
+$accent-two : #333;
+$accent     : #eee;
 $transparent: transparent;
 
 //    font variables    //
-$stack-primary   : "chantelli_antiquaregular", "noto_serifregular", sans-serif;
-$stack-secondary : "noto_serifregular", sans-serif;
+$stack-primary  : "chantelli_antiquaregular", "noto_serifregular", sans-serif;
+$stack-secondary: "noto_serifregular", sans-serif;
 
 //    media query variables    //
-$iPhone: "(max-width: 500px)";
-$iPad: "(min-width: 500px) and (max-width: 1040px)";
 $desktop: "(min-width: 1040px)";
+$iPad   : "(min-width: 500px) and (max-width: 1040px)";
+$iPhone : "(max-width: 500px)";

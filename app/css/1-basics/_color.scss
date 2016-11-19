@@ -2,16 +2,7 @@
 // Colors for all elements //
 /*------------------------*/
 
-footer p,
-strong  {
-  color: $accent-two;
-}
-
-header {
-  background-color: rgba(245, 245, 220, .89);
-  color: $accent-two;
-}
-
+//    accent     //
 #navbar a {
   background-color: $transparent;
   color: $accent;
@@ -22,21 +13,38 @@ header {
   color: $accent;
 }
 
-#about {
+//    accent-two    //
+footer p,
+strong  {
+  color: $accent-two;
+}
+
+header {
   background-color: rgba(245, 245, 220, .89);
-}
-
-.dropdown-menu li:hover, {
-  background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
-}
-
-.jumbotron,
-.navbar {
-  background: $transparent;
+  color: $accent-two;
 }
 
 //    border    //
 #back-up {
   border: 2px solid $accent-two;
   color: inherit;
+}
+
+//    jumbytron    //
+.jumbotron,
+.navbar {
+  background: $transparent;
+}
+
+.dropdown-menu {
+  background-color: $transparent;
+}
+
+//    other colors    //
+#about {
+  background-color: rgba(245, 245, 220, .89);
+}
+
+.dropdown-menu li:hover, {
+  background-color: rgba(144, 144, 144, .5);    /* 10% opaque gray */
 }

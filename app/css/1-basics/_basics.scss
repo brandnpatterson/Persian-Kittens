@@ -20,11 +20,6 @@
     font-style: normal;
 }
 
-body {
-  background: url("dist/images/speckles.png");
-  text-decoration: none;
-}
-
 //    font declarations    //
 body {
   font-family: $stack-primary;
@@ -35,4 +30,10 @@ header,
 .header-main,
 .navbar {
   font-family: $stack-secondary;
+}
+
+//    more basics    //
+body {
+  background: url("dist/images/speckles.png");
+  text-decoration: none;
 }
