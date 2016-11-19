@@ -21,14 +21,13 @@
 }
 
 //    font declarations    //
-body {
+header,
+.header-main,
+.navbar {
   font-family: $stack-primary;
 }
 
-header,
-#logo,
-.header-main,
-.navbar {
+#logo {
   font-family: $stack-secondary;
 }
 
