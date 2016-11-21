@@ -1,2 +1,2 @@
-dist/*.min.js
-dist/includes*
+dist/*.js
+dist/includes/*
