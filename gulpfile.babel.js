@@ -17,7 +17,7 @@ gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'dist/views/*', 'd
 gulp.task('default', ['html', 'styles', 'scripts', 'lint'], () => {
   gulp.start('serve')
   gulp.watch('app/*.html', ['html', reload])
-  gulp.watch('app/css/**/*.*', ['styles', reload])
+  gulp.watch('app/scss/**/*.*', ['styles', reload])
   gulp.watch('app/js/*.js', ['scripts', reload]);
 });
 
@@ -31,7 +31,7 @@ gulp.task('html', ['scripts', 'styles'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/assets/images/*')
+  return gulp.src('app/images/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
@@ -69,7 +69,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('styles', () => {
-  return gulp.src('app/css/style.scss')
+  return gulp.src('app/scss/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(prefix('last 2 versions'))
