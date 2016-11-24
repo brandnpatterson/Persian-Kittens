@@ -7,7 +7,7 @@ var CloseNavbar = (function(){
   // cacheDOM
   var $dropDownMenu = $('.dropdown-menu');
   var $navbarToggle = $('.navbar-toggle');
-  var $navRoot = $('.nav-root');
+  var $navRoot      = $('.nav-root');
 
   // bind events
   $navRoot.click(whenDropHidden);
