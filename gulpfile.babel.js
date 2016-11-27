@@ -14,14 +14,14 @@ var reload = sync.reload;
 
 gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'dist/views/*', 'dist/*.js'], {read: false}));
 
-gulp.task('default', ['html', 'styles', 'scripts', 'lint'], () => {
+gulp.task('default', ['html'], () => {
   gulp.start('serve')
   gulp.watch('app/*.html', ['html', reload])
   gulp.watch('app/scss/**/*.*', ['styles', reload])
   gulp.watch('app/js/*.js', ['scripts', reload]);
 });
 
-gulp.task('html', ['scripts', 'styles'], () => {
+gulp.task('html', ['scripts', 'lint', 'styles'], () => {
   return gulp.src('app/*.html')
     .pipe(sourcemaps.init())
     .pipe($.useref({searchPath: ['app']}))
