@@ -2,9 +2,7 @@
  * Animates the scrolling navigation
  */
 
-'use strict';
-
-!function() {
+var backUpBtn = (function() {
 
   // cacheDOM
   var backUp     = document.getElementById('back-up');
@@ -23,7 +21,6 @@
   }
 
   function fade() {
-
     var last = +new Date();
 
     // Case 1: Scroll past 800, back-up button is visible
@@ -36,7 +33,6 @@
           (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
         }
       };
-
       tick();
 
     // Case 2: button is hidden
@@ -44,4 +40,4 @@
       backUp.style.opacity = 0;
     }
   }
-}();
+})();
