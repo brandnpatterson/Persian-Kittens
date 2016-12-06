@@ -2,7 +2,7 @@
  * Animates the scrolling navigation
  */
 
-var backUpBtn = (function() {
+var scrollClick = (function() {
 
   // cacheDOM
   var backUp     = document.getElementById('back-up');
@@ -35,7 +35,7 @@ var backUpBtn = (function() {
       };
       tick();
 
-    // Case 2: button is hidden
+    // Case 2: back-up button is hidden
     } else {
       backUp.style.opacity = 0;
     }

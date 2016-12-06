@@ -1,5 +1,9 @@
 @media #{$desktop} {
 
+  #navbar {
+    max-width: 80%;
+  }
+
   #logo {
     font-size: 80px;
     margin-top: 40%;
