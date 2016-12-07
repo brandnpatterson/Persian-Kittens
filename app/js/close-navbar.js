@@ -13,12 +13,14 @@ var CloseNavbar = (function(){
   $navRoot.click(whenDropHidden);
   $dropDownMenu.click(whenDropVisible);
 
+  // close dropDown when secondary dropDown is hidden
   function whenDropHidden() {
     if ($navbarToggle.is(':visible') && $dropDownMenu.is(':hidden')) {
       $navbarToggle.trigger('click');
     }
   }
 
+  // close dropDown when secondary dropDown is visible
   function whenDropVisible() {
     if ($dropDownMenu.is(':visible')) {
       $navbarToggle.trigger('click');
