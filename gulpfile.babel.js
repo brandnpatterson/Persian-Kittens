@@ -31,7 +31,7 @@ gulp.task('html', ['scripts', 'lint', 'styles'], () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/*')
+  return gulp.src('app/images/**')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,

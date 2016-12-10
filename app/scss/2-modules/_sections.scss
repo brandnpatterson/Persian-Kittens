@@ -7,7 +7,7 @@ header {
 
 #about {
   margin-bottom: 150px;
-  height: 750px;
+  height: 1000px;
 }
 
 #about .header-main {
@@ -28,7 +28,7 @@ header {
   font-size: 20px;
   margin: 0 auto;
   max-width: 80%;
-  padding-top: 20px;
+  padding-top: 70px;
   text-align: justify;
   text-indent: 50px;
 }
@@ -56,7 +56,7 @@ header {
 }
 
 #contact-info {
-  height: 600px;
+  height: 200px;
   margin-top: 50px;
   text-align: center;
 }
@@ -70,13 +70,19 @@ header {
   padding: 0;
 }
 
-.background {
-  background: url("dist/images/showcase.jpg") no-repeat center transparent;
+// showcase
+.showcase1 {
+  background: url("dist/images/kitten-landing.jpg") no-repeat center transparent;
   background-size: 100%;
   background-position: top;
   height: 100%;
   margin: 0 auto;
   padding-top: 20px;
+  width: 100%;
+}
+
+.showcase2 img {
+  margin: 0 auto 120px;
   width: 100%;
 }
 
