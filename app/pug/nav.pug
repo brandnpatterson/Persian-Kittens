@@ -1,0 +1,47 @@
+nav#home.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    // end navbar-header
+    #navbar.navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li.nav-root
+          a.nav-scroll(data-click='home', href='#home') Home
+        li.dropdown
+          a.dropdown-toggle(href='#0', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | Males
+            span.caret
+          ul.dropdown-menu
+            li
+              a.nav-scroll(data-click='males', href='#males') CH Icing Sugar
+        // end dropdown Males
+        li.dropdown
+          a.dropdown-toggle(href='#0', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | Females
+            span.caret
+          ul.dropdown-menu
+            li
+              a.nav-scroll(data-click='females', href='#females') QGC S'more Kisses
+        // end dropdown Females
+        li.dropdown
+          a.dropdown-toggle(href='#0', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | Kittens
+            span.caret
+          ul.dropdown-menu
+            li
+              a.nav-scroll(data-click='gray-kittens', href='#gray-kittens') Gray
+            li
+              a.nav-scroll(data-click='white-kittens', href='#white-kittens') White
+        // end dropdown Kittens
+        li.nav-root
+          a.nav-scroll(data-click='shows', href='#shows') Shows
+      // end navbar-nav
+      ul.nav.navbar-nav.navbar-right
+        li.nav-root
+          a.nav-scroll(data-click='about', href='#about') About
+        li.nav-root
+          a.nav-scroll(data-click='contact', href='#contact') Contact

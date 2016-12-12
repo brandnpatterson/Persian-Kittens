@@ -1,0 +1,355 @@
+doctype html
+html(lang='en')
+    include vars.pug
+    include head.pug
+body
+  .container-fluid
+    include nav.pug
+
+    #myCarousel.carousel.slide(data-ride='carousel')
+      // Wrapper for slides
+      .carousel-inner(role='listbox')
+        .item.active
+          img(src='dist/images/kitten-landing.jpg', alt='kitten landing', width='100%', height='700px')
+        .item
+          img(src='dist/images/kitten-landing2.jpg', alt='kitten landing2', width='100%', height='700px')
+        .item
+          img(src='dist/images/kitten-landing3.jpg', alt='kitten landing3', width='100%', height='700px')
+  // end Carousel
+
+  .jumbotron
+    h1#logo Zina's Cattery
+
+  a#back-up.nav-scroll(data-click='home', href='#home')
+    div
+      span.glyphicon.glyphicon-triangle-top
+      p
+        | Back to Top
+  // end back-up
+  #about
+    .row
+      h2.header-main
+        strong About Us
+      .col-sm-6.image
+        img(src='dist/images/male-show.jpg', alt='male cat show')
+      // end col-sm-4
+      .col-med-6
+        p
+          | We are a small hobby CFA registered cattery specializing in Himalayans Cats (Persians with Points) located near Houston, Texas. We raise sweet, healthy, fully socialized, litter box trained fur~babies. My breeding cats are PKD/DNA FELV & FIV NEG. Our cattery and cats are also free of fleas, fungus and internal parasites.
+      p
+        | We show in both CFA and TICA. We breed for type, head as well as body specifics to ensure consistency with CFA and TICA standards. We only produce a couple litters each year and will sell our cats as PETS ONLY~ We give NO BREEDING RIGHTS and we DO NOT CO~OWN or and DO NOT OFFER stud services.
+  // end about
+
+  #wrapper.container-fluid
+    header#males.col-sm-12
+      h2.title-males
+        strong CH
+        |  - ALFENLOCH ICING SUGAR OF ZINAS
+
+    .males-images
+      a(href='#modalMale', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/male.jpg', alt='white male cat')
+      #modalMale.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 SQC CH ALFENLOCH ICING SUGAR OF ZINAS
+            .modal-body
+              img(src='dist/images/male.jpg', alt='male cat')
+
+      a(href='#modalMale2', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/male2.jpg', alt='white male cat')
+      #modalMale2.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 SQC CH ALFENLOCH ICING SUGAR OF ZINAS
+            .modal-body
+              img(src='dist/images/male2.jpg', alt='male cat')
+    // end males
+
+    header#females.col-sm-12.header
+      h2.title-females
+        strong CH - THUERINGINS S'MORE KISSES OF ZINA
+    div
+      a(href='#modalFemale', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/female.jpg', alt='gray female cat')
+      #modalFemale.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 CH THUERINGINS S'MORE KISSES OF ZINA
+            .modal-body
+              img(src='dist/images/female.jpg', alt='female cat')
+
+      a(href='#modalFemale2', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/female2.jpg', alt='gray female cat')
+      #modalFemale2.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 CH THUERINGINS S'MORE KISSES OF ZINAS
+            .modal-body
+              img(src='dist/images/female2.jpg', alt='female cat')
+    // end females
+
+    header#gray-kittens.col-sm-12.header
+      h2.title-gray Gray Kittens
+    div
+      a(href='#modalGrayKitten', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/gray-kitten.jpg', alt='gray kitten')
+      #modalGrayKitten.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Gray Kitten
+            .modal-body
+              img(src='dist/images/gray-kitten.jpg', alt='gray kitten')
+
+      a(href='#modalGrayKitten2', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/gray-kitten2.jpg', alt='gray kitten')
+      #modalGrayKitten2.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Gray Kitten
+            .modal-body
+              img(src='dist/images/gray-kitten2.jpg', alt='gray kitten')
+
+      a(href='#modalGrayKitten3', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/gray-kitten3.jpg', alt='gray kitten')
+
+      #modalGrayKitten3.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Gray Kitten
+            .modal-body
+              img(src='dist/images/gray-kitten3.jpg', alt='gray kitten')
+
+    header#white-kittens.col-sm-12.header
+      h2.title-white White Kittens
+    // end header
+    div
+      a(href='#modalWhiteKitten', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/white-kitten.jpg', alt='gray kitten')
+        // end col-sm-4
+      // end link
+      #modalWhiteKitten.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 White Kitten
+            // end modal-header
+            .modal-body
+              img(src='dist/images/white-kitten.jpg', alt='gray kitten')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalWhiteKitten
+      a(href='#modalWhiteKitten2', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/white-kitten2.jpg', alt='white kitten')
+        // end col-sm-4
+      // end link
+      #modalWhiteKitten2.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 White Kitten
+            // end modal-header
+            .modal-body
+              img(src='dist/images/white-kitten2.jpg', alt='white kitten')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalWhiteKitten3
+    // end white-kittens
+    header#shows.col-sm-12.header
+      h2.title-shows Shows
+    // end header
+    div
+      a(href='#modalFemaleShow', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/female-show.jpg', alt='female cat show')
+        // end col-sm-4
+      // end link
+      #modalFemaleShow.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Female Show
+            // end modal-header
+            .modal-body
+              img(src='dist/images/female-show.jpg', alt='female cat show')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalFemaleShow
+      a(href='#modalFemaleShow2', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/female-show2.jpg', alt='female cat show')
+        // end col-sm-4
+      // end link
+      #modalFemaleShow2.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Female Show
+            // end modal-header
+            .modal-body
+              img(src='dist/images/female-show2.jpg', alt='female cat show')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalMaleShow
+      a(href='#modalgray-kittenshow', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/gray-kitten-show.jpg', alt='gray kitten show')
+        // end col-sm-4
+      // end link
+      #modalgray-kittenshow.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Gray Kitten Show
+            // end modal-header
+            .modal-body
+              img(src='dist/images/gray-kitten-show.jpg', alt='gray kitten show')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalgray-kittenshow
+      a(href='#modalgray-kittenshow2', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/gray-kitten-show2.jpg', alt='gray kitten show')
+        // end col-sm-4
+      // end link
+      #modalgray-kittenshow2.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Gray Kitten Show
+            // end modal-header
+            .modal-body
+              img(src='dist/images/gray-kitten-show2.jpg', alt='gray kitten show')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalgray-kittenshow2
+      a(href='#modalgray-kittenshow3', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/gray-kitten-show3.jpg', alt='gray kitten show')
+        // end col-sm-4
+      // end link
+      #modalgray-kittenshow3.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 Gray Kitten Show
+            // end modal-header
+            .modal-body
+              img(src='dist/images/gray-kitten-show3.jpg', alt='gray kitten show')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalgray-kittenshow3
+      a(href='#modalwhite-kittenshow', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/white-kitten-show.jpg', alt='white kitten show')
+        // end col-sm-4
+      // end link
+      #modalwhite-kittenshow.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 White Kitten Show
+            // end modal-header
+            .modal-body
+              img(src='dist/images/white-kitten-show.jpg', alt='white kitten show')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalwhite-kittenshow
+      a(href='#modalwhite-kittenshow2', role='button', data-toggle='modal')
+        .col-sm-6.image
+          img(src='dist/images/white-kitten-show2.jpg', alt='white kitten show')
+        // end col-sm-4
+      // end link
+      #modalwhite-kittenshow2.modal.fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(data-dismiss='modal') ×
+              h4 White Kitten Show
+            // end modal-header
+            .modal-body
+              img(src='dist/images/white-kitten-show2.jpg', alt='white kitten show')
+            // end modal-body
+          // end modal-content
+        // end modal-dialog
+      // end modalwhite-kittenshow2
+    // end shows
+    header#contact.col-sm-12.header
+      h2 Contact
+    // end header
+    #contact-info.col-sm-12
+      h2 Phone: (888)867-5309
+      h2
+        | Email:
+        a(href='mailto:zina@zinascattery.com') zina@zinascattery.com
+    // end contact
+  // end container-fluid
+  .showcase2
+    img(src='dist/images/showcase.jpg')
+  footer
+    a.nav-scroll(data-click='home', href='#home') Home
+    |  |
+    a.nav-scroll(data-click='males', href='#males') Males
+    |  |
+    a.nav-scroll(data-click='females', href='#females') Females
+    |  |
+    a.nav-scroll(data-click='gray-kittens', href='#gray-kittens') Gray Kittens
+    |  |
+    a.nav-scroll(data-click='white-kittens', href='#white-kittens') White Kittens
+    |  |
+    a.nav-scroll(data-click='shows', href='#shows') Shows
+    |  |
+    a.nav-scroll(data-click='about', href='#about') About
+    |  |
+    a.nav-scroll(data-click='contact', href='#contact') Contact
+    br
+    br
+    a.copyright(href='http://brandnpatterson.net/')
+      | ©
+      script(type='text/javascript').
+        document.write(new Date().getFullYear());
+      |    Brandon Patterson. All Rights Reserved.
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script.
+    window.jQuery || document.write('<script src="dist/includes/jquery-3.1.1.min.js"><\\x3C\/script>')
+  script(src='dist/includes/bootstrap.min.js')
+  script(src='dist/index.min.js')
