@@ -9,7 +9,7 @@ var CloseNavbar = (function(){
   var $navbarToggle = $('.navbar-toggle');
   var $navRoot      = $('.nav-root');
 
-  // bind events
+  // Events
   $navRoot.click(whenDropHidden);
   $dropDownMenu.click(whenDropVisible);
 
