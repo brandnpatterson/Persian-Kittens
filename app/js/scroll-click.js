@@ -5,15 +5,10 @@
 var scrollClick = (function() {
 
   // cacheDOM
-  var backUp     = document.getElementById('back-up');
-  var $body      = $('body');
-  var $navScroll = $('.nav-scroll');
-  var $window    = $(window);
-
-  // bind events
-  backUp.style.opacity = 0;
-  $navScroll.click(scroll);
-  $window.scroll(fade);
+  var backUp     = document.getElementById('back-up'),
+      $body      = $('body'),
+      $navScroll = $('.nav-scroll'),
+      $window    = $(window);
 
   function scroll() {
     var scrollId = $(this).attr('data-click');
@@ -40,4 +35,9 @@ var scrollClick = (function() {
       backUp.style.opacity = 0;
     }
   }
+
+  // Events
+  backUp.style.opacity = 0;
+  $navScroll.click(scroll);
+  $window.scroll(fade);
 })();
