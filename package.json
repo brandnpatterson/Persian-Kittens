@@ -30,7 +30,6 @@
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
   "main": "index.html",
-  "license": "ISC",
   "url": "http://www.brandnpatterson.net/zinas",
   "homepage": "http://www.brandnpatterson.net/zinas",
   "dependencies": {},
