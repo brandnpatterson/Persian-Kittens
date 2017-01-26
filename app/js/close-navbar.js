@@ -13,6 +13,7 @@ var CloseNavbar = (function(){
   function triggerClick(selection) {
     selection.trigger('click');
   }
+  
   // Close dropDown when secondary dropDown is hidden
   function whenDropHidden() {
     if ($navbarToggle.is(':visible') && $dropDownMenu.is(':hidden')) {
