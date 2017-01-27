@@ -6,7 +6,7 @@
     "build:all": "npm run build:pug & npm run build:css",
     "build:css": "npm run sass && npm run autoprefixer",
     "build:images": "imagemin app/images/* -o dist/images",
-    "build:js": "webpack",
+    "build:js": "NODE_ENV=production webpack",
     "build:pug": "pug app/pug/index.pug -o ./",
     "clean": "rimraf index.html app/assets/views dist/css dist/js dist/views/*.html",
     "clean:images": "rimraf dist/images/*",
