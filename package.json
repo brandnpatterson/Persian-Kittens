@@ -54,7 +54,7 @@
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^2.5.4",
     "uglify-js": "^2.7.4",
-    "webpack": "^1.13.3"
+    "webpack": "^1.14.0"
   },
   "repository": {
     "type": "git",
