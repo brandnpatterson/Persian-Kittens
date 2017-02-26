@@ -10,8 +10,8 @@ var scrollClick = (function() {
       $navScroll = $('.nav-scroll'),
       $window    = $(window);
 
-  function scroll(e) {
-    var scrollId = $(e.target).attr('data-click');
+  function scroll() {
+    var scrollId = $(this).attr('data-click');
     $body.animate({scrollTop: $('#'+scrollId).offset().top}, 1000);
   }
 
